@@ -4,8 +4,9 @@ class Person {
         this.age = age;
     }
 
-    getGretting() {
+    getGreeting() {
         // return 'Hi I am ' + this.name + "!";
+        // es6 Template string!!!
         return `Hi. I am ${this.name}!`;
     }
 
@@ -40,8 +41,8 @@ class Traveler extends Person {
     hasHomeLocation(){
         return !!this.homeLocation;
     }
-    getGretting() {
-        let greeting = super.getGretting();
+    getGreeting() {
+        let greeting = super.getGreeting();
         if (this.hasHomeLocation()){
             greeting += ` I'm Visition from ${this.homeLocation}.`;
         }
@@ -57,6 +58,6 @@ console.log(me);
 
 console.log(other);
 
-console.log(me.getGretting());
+console.log(me.getGreeting());
 
-console.log(other.getGretting());
+console.log(other.getGreeting());
